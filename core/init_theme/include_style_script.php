@@ -17,5 +17,12 @@ function theme_scripts() {
         array(),
         $ConfigTheme['style']['version']
     );
+
+    wp_enqueue_style(
+        'name_style',
+        get_template_directory_uri() . '/assets/global/css/font-awesome.min.css',
+        array(),
+        $ConfigTheme['style']['version']
+    );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
