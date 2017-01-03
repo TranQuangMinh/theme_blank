@@ -19,7 +19,7 @@ function theme_scripts() {
     );
 
     wp_enqueue_style(
-        'name_style',
+        'fontawesome_style',
         get_template_directory_uri() . '/assets/global/css/font-awesome.min.css',
         array(),
         $ConfigTheme['style']['version']

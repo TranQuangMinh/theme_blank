@@ -1,5 +1,7 @@
 <?php
 
+define('CORE_PATH', get_template_directory_uri() . '/core');
+
 require_once __DIR__ . '/config/autoload.php';
 require_once __DIR__ . '/init_theme/autoload.php';
 require_once __DIR__ . '/class/autoload.php';
