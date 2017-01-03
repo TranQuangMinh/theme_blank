@@ -21,6 +21,8 @@ $save='
 		<div class="logo"></div>
 		<ul>
 			<li class="tie-tabs general"><a href="#tab0"><span></span>Tổng quan</a></li>
+			<li class="tie-tabs general"><a href="#tab_social"><span></span>Liên kết mạng xã hội</a></li>
+			<li class="tie-tabs general"><a href="#tab_contact"><span></span>Thông tin Liên hệ</a></li>
 		</ul>
 		<div class="clear"></div>
 		</div> <!-- .mo-panel-tabs -->
@@ -28,18 +30,11 @@ $save='
 		
 		<div class="mo-panel-content">
 			<form action="/" name="tie_form" id="tie_form">
-				<div id="tab0" class="tabs-wrap">
-					<h2>General Settings</h2> <?php echo $save ?>
-					<div class="tiepanel-item">
-						<h3>bbPress Settings</h3>
-						<?php
-						tie_options(
-						array(  "name" => "Banner header",
-						"id" => "banner_header",
-						"type" => "upload"));
-						?>
-					</div>
-				</div>
+
+				<?php require_once('forms/_forms_tab_0.php'); ?>
+				<?php require_once('forms/_forms_tab_social.php'); ?>
+				<?php require_once('forms/_forms_tab_contact.php'); ?>
+
 				<div class="mo-footer">
 					<?php echo $save; ?>
 				</div>

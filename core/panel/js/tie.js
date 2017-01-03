@@ -31,7 +31,8 @@ jQuery(document).ready(function() {
         }
     };
     
-    codex4u_set_uploader("banner_header"); 
+    codex4u_set_uploader("logo_header"); 
+    // codex4u_set_uploader("banner_header"); 
 
 // Del Preview Image
     jQuery(document).on("click", ".del-img" , function(){
