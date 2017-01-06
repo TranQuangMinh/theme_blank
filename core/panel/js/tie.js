@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
     };
     
     codex4u_set_uploader("logo_header"); 
-    // codex4u_set_uploader("banner_header"); 
+    codex4u_set_uploader("logo_header_mobile"); 
 
 // Del Preview Image
     jQuery(document).on("click", ".del-img" , function(){

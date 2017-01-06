@@ -59,10 +59,9 @@ function tie_clean_options(&$value) {
 /* ADD EDITOR */
 /*-----------------------------------------------------------------------------------*/
 function add_aditor() {
-     register_setting( 'codex-settings-group', 'textfooter' );
-     register_setting( 'codex-settings-group', 'textheader' );
-     register_setting( 'codex-settings-group', 'texteditor' );
-     register_setting( 'codex-settings-group', 'address-footer' );
+ 	register_setting( 'codex-settings-group', 'su_menh' );
+ 	register_setting( 'codex-settings-group', 'cam_ket' );
+ 	register_setting( 'codex-settings-group', 'dich_vu' );
 }
 add_action( 'admin_init', 'add_aditor' ); 
     

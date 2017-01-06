@@ -5,7 +5,35 @@ function panel_options() {
 	foreach ($categories_obj as $pn_cat) {
 		$categories[$pn_cat->cat_ID] = $pn_cat->cat_name;
 	}
-	
+
+	$tags_obj = get_tags('hide_empty=0');
+	$tags = array();
+	foreach ($tags_obj as $pn_cat) {
+		$tags[$pn_cat->term_id] = $pn_cat->name;
+	}
+
+	$args = array(
+			'sort_order' => 'desc',
+			'sort_column' => 'id',
+			'hierarchical' => 1,
+			'exclude' => '',
+			'include' => '',
+			'meta_key' => '',
+			'meta_value' => '',
+			'authors' => '',
+			'child_of' => 0,
+			'parent' => -1,
+			'exclude_tree' => '',
+			'number' => '',
+			'offset' => 0,
+			'post_type' => 'page',
+			'post_status' => 'publish'
+		);
+	$pages = get_pages($args);
+	$optionsPage = array();
+	foreach ($pages as $page) {
+		$optionsPage[$page->ID] = $page->post_title;
+	}
 $save='
 	<div class="mpanel-submit">
 			<input type="hidden" name="action" value="test_theme_data_save" />
@@ -21,6 +49,8 @@ $save='
 		<div class="logo"></div>
 		<ul>
 			<li class="tie-tabs general"><a href="#tab0"><span></span>Tổng quan</a></li>
+			<li class="tie-tabs general"><a href="#tab_contact"><span></span>Trang chủ</a></li>
+			<li class="tie-tabs general"><a href="#tab_footer"><span></span>Footer</a></li>
 			<li class="tie-tabs general"><a href="#tab_social"><span></span>Liên kết mạng xã hội</a></li>
 			<li class="tie-tabs general"><a href="#tab_contact"><span></span>Thông tin Liên hệ</a></li>
 		</ul>
@@ -32,6 +62,8 @@ $save='
 			<form action="/" name="tie_form" id="tie_form">
 
 				<?php require_once('forms/_forms_tab_0.php'); ?>
+				<?php require_once('forms/_forms_tab_home.php'); ?>
+				<?php require_once('forms/_forms_tab_footer.php'); ?>
 				<?php require_once('forms/_forms_tab_social.php'); ?>
 				<?php require_once('forms/_forms_tab_contact.php'); ?>
 

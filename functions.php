@@ -11,8 +11,8 @@ if ( ! function_exists( 'theme_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu',      'twentyfifteen' ),
-			'social'  => __( 'Social Links Menu', 'twentyfifteen' ),
+			'primary' => __( 'Primary Menu' ),
+			'footer'  => __( 'Footer Menu'),
 		) );
 	}
 endif; // theme_setup

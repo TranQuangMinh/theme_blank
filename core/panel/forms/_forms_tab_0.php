@@ -7,6 +7,11 @@
 				"id" => "logo_header",
 				"type" => "upload")
 			);
+			tie_options(
+				array(  "name" => "Logo Mobile",
+				"id" => "logo_header_mobile",
+				"type" => "upload")
+			);
 		?>
 	</div>
 </div>

@@ -5,6 +5,46 @@
 */
 class helper
 {
+	public static function removeJunkSpace($string)
+	{
+		$words = array_filter(explode(' ', trim($string)));
+		return trim(implode(' ', $words));
+	}
+
+	public static function niceWordsByChars($text, $max_char = 100, $end = '...')
+	{
+		$text = trim(strip_tags($text));
+		$max_char = (int) $max_char;
+		$end = trim($end);
+
+		if ($text != '') {
+			$text = self::removeJunkSpace($text);
+		}
+
+		$output = '';
+
+		if (mb_strlen($text, 'UTF-8') > $max_char) {
+			$words = explode(' ', $text);
+			$i = 0;
+
+			while (1) {
+				$length = mb_strlen($output, 'UTF-8') + mb_strlen($words[$i], 'UTF-8');
+
+				if ($length > $max_char) {
+					break;
+				} else {
+					$output .= ' ' . $words[$i];
+					++$i;
+				}
+			}
+
+			$output .= $end;
+		} else {
+			$output = $text;
+		}
+
+		return trim($output);
+	}
 
     public static function getImageByFolder($slug, $size = 'thumbnail')
     {
