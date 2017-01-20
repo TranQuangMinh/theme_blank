@@ -1,4 +1,4 @@
-<div id="tab_contact" class="tabs-wrap">
+<div id="tab_home" class="tabs-wrap">
 	<h2>Các thông tin liên hệ</h2> <?php echo $save ?>
 	<div class="tiepanel-item">
 		<?php

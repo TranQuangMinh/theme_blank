@@ -27,6 +27,12 @@
 		</div>
 		<div class="main-menu">
 			<div class="wrap-menu">
+				<?php if (is_front_page()) : ?>
+					<h1 class="text-site">Mặt hoa da phấn</h1>
+				<?php else: ?>
+					<h3 class="text-site">Mặt hoa da phấn</h3>
+				<?php endif; ?>
+
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'primary',

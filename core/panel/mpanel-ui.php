@@ -49,7 +49,7 @@ $save='
 		<div class="logo"></div>
 		<ul>
 			<li class="tie-tabs general"><a href="#tab0"><span></span>Tổng quan</a></li>
-			<li class="tie-tabs general"><a href="#tab_contact"><span></span>Trang chủ</a></li>
+			<li class="tie-tabs general"><a href="#tab_home"><span></span>Trang chủ</a></li>
 			<li class="tie-tabs general"><a href="#tab_footer"><span></span>Footer</a></li>
 			<li class="tie-tabs general"><a href="#tab_social"><span></span>Liên kết mạng xã hội</a></li>
 			<li class="tie-tabs general"><a href="#tab_contact"><span></span>Thông tin Liên hệ</a></li>

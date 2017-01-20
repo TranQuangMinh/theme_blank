@@ -14,4 +14,14 @@
 			);
 		?>
 	</div>
+	<h2>Limit</h2> <?php echo $save ?>
+	<div class="tiepanel-item">
+		<?php
+			tie_options(
+				array(  "name" => "Số lượng tin liên quan",
+				"id" => "limit_related",
+				"type" => "text")
+			);
+		?>
+	</div>
 </div>

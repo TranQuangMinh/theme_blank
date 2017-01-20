@@ -20,13 +20,7 @@
 	$the_query_customer = new WP_Query( array(
 		'posts_per_page' => 12,
 		'cat' => $categoryCustomer->term_id
-	) );
-
-	$servicePopular = get_tag(tie_get_option('tag_service_popular'));
-	$the_query_tag = new WP_Query( array(
-		'posts_per_page' => 12,
-		'tag_id' => $servicePopular->term_id
-	) );
+	) ); 
 
 	$serviceAll = 2;
 	$the_query_all = new WP_Query( array(
@@ -65,6 +59,7 @@
 	</div>
 </div>
 
+<?php /*
 <div class="section section-title text-center">
 	<span class="text">Sứ mệnh & Cam kết</span>
 </div>
@@ -86,33 +81,9 @@
 		</div>
 	</div>
 </div>
-
-<div class="section section-service">
-	<div class="container">
-		<div class="relative">
-			<div class="block-intro">
-				<h3 class="title-style1">Các <?php echo $servicePopular->name  ?></h3>
-				<div class="content"><?php echo nl2br($servicePopular->description) ?></div>
-			</div>
-
-			<div class="slider-product">
-				<div class="wrap-slider listing-style1">
-					<div class="wrap-inner owl-carousel">
-						<?php
-						if ( $the_query_tag->have_posts() ) {
-							while ( $the_query_tag->have_posts() ) {
-								$the_query_tag->the_post();
-								include "loop/_item_slider_image_title.php";
-							}
-						}
-						wp_reset_postdata();
-						?>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
+*/?>
+<div class="container">
+	<?php echo do_shortcode( '[service_popular]' ); ?>
 </div>
 
 <div class="section section-title text-center">
@@ -163,6 +134,7 @@
 	</div>
 </div>
 
+<?php /*
 <div class="section section-news n-p-b">
 	<div class="container">
 		<div class="text-center">
@@ -210,5 +182,5 @@
 		</div>
 	</div>
 </div>
-
+*/ ?>
 <?php get_footer() ?>

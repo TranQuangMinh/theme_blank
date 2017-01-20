@@ -23,6 +23,29 @@
 					"type" => "text"
 				)
 			);
+			tie_options(
+				array(
+					"name" => "Email nhận liên hệ",
+					"id" => "contact_email_receive",
+					"type" => "text"
+				)
+			);
+			tie_options(
+				array(
+					"name" => "Trang cảm ơn",
+					"id" => "page_thank",
+					"type" => "select",
+					"options" => $optionsPage
+				)
+			);
+			tie_options(
+				array(
+					"name" => "Chuyên mục cho phép book",
+					"id" => "service",
+					"type" => "select",
+					"options" => $categories
+				)
+			);
 		?>
 	</div>
 </div>

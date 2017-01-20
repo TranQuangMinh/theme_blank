@@ -51,7 +51,7 @@ $(document).ready(function(){
 	            	navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
 	            },
 	            1000:{
-	                items:4,
+	                items:3,
 	                loop:false
 	            }
 	        },
@@ -93,13 +93,43 @@ $(document).ready(function(){
 
 	if ($('.section-service').length > 0) {
 		$('.section-service').css({
-			minHeight: $('.section-service .block-intro').outerHeight() + 100
+			minHeight: $('.section-service .block-intro').outerHeight() + 80
 		})
 	}
 
 	if ($('.listing-style2 .thumbnail').length > 0) {
 		$('.listing-style2').find('.thumbnail').each(function(id, tag) {
 			$(tag).height( $(tag).width() / 1.33 );
+		});
+	}
+
+	if ($('.resize-frame').length > 0) {
+		$('.resize-frame').each(function(id, tag) {
+			var ratio = '1';
+			if (typeof $(tag).data().ratio != 'undefined' && $(tag).data().ratio > 0) {
+				ratio = $(tag).data().ratio
+			}
+			$(tag).height( $(tag).width() / ratio );
+		});
+	}
+
+	$('.main-menu').clone().addClass('cloned').wrapInner('<div class="container"></div>').appendTo('.heaer-site');
+
+	if( typeof $.datetimepicker != 'undefined') {
+		jQuery.datetimepicker.setLocale('vi');
+
+		jQuery('.datetimepicker').datetimepicker({
+			i18n: {
+				vi: {
+					months: [
+						"Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
+					],
+					dayOfWeekShort: [
+						"CN", "T2", "T3", "T4", "T5", "T6", "T7"
+					],
+					dayOfWeek: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"]
+				}
+			}
 		});
 	}
 })
@@ -110,5 +140,17 @@ $(document).ready(function(){
 .on('click', '.header-menu', function(event) {
 	event.preventDefault();
 	$('.main-menu-mobile').toggleClass('active');
+});
+
+
+$(window).on('scroll', function(){
+    $top = $(window).scrollTop();
+    $offTop = $('.main-menu').offset().top + $('.main-menu').outerHeight();
+
+    if ($top >= $offTop) {
+        $('body').addClass('show-menu-fixed');
+    } else {
+        $('body').removeClass('show-menu-fixed');
+    }
 });
 
