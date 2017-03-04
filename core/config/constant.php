@@ -5,6 +5,6 @@ global $ConfigTheme;
 $ConfigTheme = array(
 
     'style' => array(
-        'version' => '12'
+        'version' => time()
     )
 );

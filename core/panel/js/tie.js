@@ -32,7 +32,16 @@ jQuery(document).ready(function() {
     };
     
     codex4u_set_uploader("logo_header"); 
-    // codex4u_set_uploader("banner_header"); 
+    codex4u_set_uploader("logo_header_small"); 
+    codex4u_set_uploader("special_banner_1");
+    codex4u_set_uploader("special_banner_2");
+    codex4u_set_uploader("special_banner_3");
+
+    codex4u_set_uploader("special_thumbnail_1");
+    codex4u_set_uploader("special_thumbnail_2");
+    codex4u_set_uploader("special_thumbnail_3");
+
+    codex4u_set_uploader("bg-menu");
 
 // Del Preview Image
     jQuery(document).on("click", ".del-img" , function(){

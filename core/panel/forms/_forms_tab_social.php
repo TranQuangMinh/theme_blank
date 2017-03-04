@@ -9,6 +9,20 @@
 					"type" => "text"
 				)
 			);
+			tie_options(
+				array(
+					"name" => "instagram",
+					"id" => "instagram_link",
+					"type" => "text"
+				)
+			);
+			tie_options(
+				array(
+					"name" => "Pinterest",
+					"id" => "pinterest_link",
+					"type" => "text"
+				)
+			);
 		?>
 	</div>
 </div>

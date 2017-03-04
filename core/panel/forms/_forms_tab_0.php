@@ -8,5 +8,30 @@
 				"type" => "upload")
 			);
 		?>
+		<?php
+			tie_options(
+				array(  "name" => "Logo nhỏ",
+				"id" => "logo_header_small",
+				"type" => "upload")
+			);
+		?>
+	</div>
+	<div class="tiepanel-item">
+		<?php
+			tie_options(
+				array(  "name" => "Hình nền Menu",
+				"id" => "bg-menu",
+				"type" => "upload")
+			);
+		?>
+	</div>
+	<div class="tiepanel-item">
+		<?php
+			tie_options(
+				array(  "name" => "Shortcode slider Home",
+				"id" => "slideHome",
+				"type" => "text")
+			);
+		?>
 	</div>
 </div>
