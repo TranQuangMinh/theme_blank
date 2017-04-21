@@ -10,45 +10,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="overlay-menu btn"></div> 
-	<div class="header-site">
-		<div class="container">
-			<div class="block-languge">
-				<a class="active" href="">ENG</a> /
-				<a href="http://vi.lilya.vaydepsaigon.com">VIE</a>
-			</div>
-			
-			<div class="block-cart">
-				<form action="" class="form-search">
-					<button type="submit"></button>
-					<input type="text" name="s">
-					<input type="hidden" name="post_type" value="product">
-				</form>
-			</div>
-
-			<div class="logo text-center"   >
-				<a title="<?php echo bloginfo('name') ?>" href="<?php echo bloginfo('url') ?>">
-					<img class="big"  src="<?php echo tie_get_option('logo_header')?>" alt="">
-					<img class="small" src="<?php echo tie_get_option('logo_header_small')?>" alt="">
-				</a>
-			</div>
-		</div>
-		
-		<a href="" class="btn btn-menu visible-xs visible-sm"></a>
-
-
-		<div class="menu-mega">
-			<div class="container">
-				<?php
-				wp_nav_menu(array(
-					'theme_location' => 'primary'
-				));
-				?>
-			</div>
-			<style>
-				.mega-menu > .sub-menu{
-					background-image: url(<?php echo tie_get_option('bg-menu') ?>);
-				}
-			</style>
-		</div>
-	</div>
+    <?php
+//    wp_nav_menu(array(
+//        'theme_location' => 'primary'
+//    ));
+    ?>
